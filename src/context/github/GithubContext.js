@@ -78,11 +78,11 @@ export const GithubProvider = ({ children }) => {
       }
     );
 
-    const repos = await response.json();
+    const data = await response.json();
 
     dispatch({
       type: 'GET_REPOS',
-      payload: repos,
+      payload: data,
     });
   };
 
